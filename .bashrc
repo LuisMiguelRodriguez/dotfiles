@@ -1,11 +1,11 @@
 #!/bin/bash
-alias thewire='ssh root@138.68.252.167'
 alias notes='vim ~/vimwiki/index.wiki '
 alias Code='cd /media/luisthecoder/Code'
 alias ll='ls -alF'
 alias la='ls -Ar'
 alias l='ls -CF'
-alias bashrc='vim ~/.bashrc'
+alias i3config='vim ~/.config/i3/config'
+alias bashrc='vim ~/.bashrc' 
 alias vimrc='vim ~/.vimrc'
 alias tmux.conf='vim ~/.tmux.conf'
 alias v='vim'
@@ -13,6 +13,8 @@ alias cmscript='cd /mnt/c/Users/mikes/scripts'
 alias cmdownloads='cd /mnt/c/Users/mikes/scripts'
 alias cmdocuments='cd /mnt/c/Users/mikes/scripts'
 
+# enables gits auto completition
+source ~/git-completion.bash
 
 #set vi MOde in Bash
 #set -o vi
@@ -32,8 +34,6 @@ shopt -s checkwinsize
 if [ -x /usr/bin/dircolors  ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
 
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'

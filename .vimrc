@@ -38,7 +38,8 @@ let g:tern_show_argument_hints='on_hold'
      Plug 'tpope/vim-commentary'
      Plug 'airblade/vim-gitgutter'
      Plug 'prabirshrestha/asyncomplete.vim'
-     Plug 'sbdchd/neoformat'
+"     Plug 'prettier/vim-prettier', { 'do': 'npm install'  }
+"     Plug 'sbdchd/neoformat'
 
      
 
@@ -55,6 +56,7 @@ map <C-n> :NERDTreeToggle<CR>
 " ctrl+s to save file
 "map <C-s> :w<CR>
 map <Esc><Esc> :w<CR>
+
 
 
 " Toggle for Pasting
@@ -88,17 +90,23 @@ let g:user_emmet_leader_key='<Tab>'
  let g:ycm_add_preview_to_completeopt = 0"
  
 
- "configure Neoformat to use Vim's formatprg as its formatter
- let g:neoformat_try_formatprg = 1
+"run autoformatter on save
+"autocmd BufWritePre *.js Neoformat
+
+"configure Neoformat to use Vim's formatprg as its formatter
+"let g:neoformat_try_formatprg = 1
+"let g:neoformat_run_all_formatters = 1
+"let g:neoformat_verbose = 1
  
- "
- augroup NeoformatAutoFormat
-      autocmd!
-      autocmd FileType javascript,javascript.jsx setlocal formatprg=prettier\
-                                                             \--stdin\
-                                                             \--print-width\ 80\
-                                                             \--single-quote\
-                                                             \--trailing-comma\ es5
-      autocmd BufWritePre *.js,*.jsx Neoformat
-  augroup END
+
+" augroup NeoformatAutoFormat
+"      autocmd!
+"      autocmd FileType javascript,javascript.jsx setlocal formatprg=prettier\
+"                                                             \ --stdin\
+"                                                             \ --print-width\ 80\
+"                                                             \ --single-quote\
+"                                                             \ --trailing-comma\ es5
+"      autocmd BufWritePre *.js,*.jsx Neoformat
+"  augroup END
+
 
