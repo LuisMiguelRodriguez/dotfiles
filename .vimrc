@@ -6,6 +6,7 @@ set colorcolumn=100
 
 set expandtab ts=4 sw=4 ai
 set encoding=UTF-8
+set relativenumber
 
 
 "-- AUTOCOMPLETION --
@@ -39,10 +40,14 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'vwxyutarooo/nerdtree-devicons-syntax'
 Plug 'Chiel92/vim-autoformat'
 Plug 'gyim/vim-boxdraw'
+Plug 'dhruvasagar/vim-table-mode'
+Plug 'sidorares/node-vim-debugger'
+
 
 call plug#end()
 "End of vim-plug"
 
+" vim-autoformat config
 let g:formatterpath = ['/usr/lib/node_modules/js-beautify']
 au BufWrite * :Autoformat
 
@@ -53,7 +58,8 @@ map <C-n> :NERDTreeToggle<CR>
 "map <C-s> :w<CR>
 noremap <Esc><Esc> :w<CR>
 
-
+"for box draw
+set virtualedit+=all
 
 " Toggle for Pasting
 set pastetoggle=<F2>
@@ -84,3 +90,5 @@ let g:ycm_enable_diagnostic_highlighting = 0
 " Don't show YCM's preview window [ I find it really annoying  ]
 set completeopt-=preview
 let g:ycm_add_preview_to_completeopt = 0"
+
+

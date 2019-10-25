@@ -91,3 +91,21 @@ function parse_git_dirty {
 }
 
 export PS1="> \[\e[31m\]\u\[\e[m\] \[\e[37m\]@\[\e[m\] \[\e[33m\]\W\[\e[m\] \[\e[36m\]\`parse_git_branch\`\[\e[m\]: "
+
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[ -f /media/luisthecoder/Code/headbandshopify/node_modules/tabtab/.completions/serverless.bash ] && . /media/luisthecoder/Code/headbandshopify/node_modules/tabtab/.completions/serverless.bash
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[ -f /media/luisthecoder/Code/headbandshopify/node_modules/tabtab/.completions/sls.bash ] && . /media/luisthecoder/Code/headbandshopify/node_modules/tabtab/.completions/sls.bash
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[ -f /media/luisthecoder/Code/headbandshopify/node_modules/tabtab/.completions/slss.bash ] && . /media/luisthecoder/Code/headbandshopify/node_modules/tabtab/.completions/slss.bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+# update defualt python version to be used
+alias python='/usr/bin/python3'
